@@ -19,15 +19,15 @@ class LoginActivity : AppCompatActivity() {
         }
 
         bt_inicio_sesion.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-            /*if (correo_in!=null && ((correo_in==correo) && (clave_in==clave)) && (clave_in!=null) ){
+            var clave_in=et_clave.text.toString()
+            var correo_in=et_correo.text.toString()
+            if (correo_in!=null && ((correo_in==correo) && (clave_in==clave)) && (clave_in!=null) ){
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
             }else{
                 tv_consola_login.text=getString(R.string.autentificacion_fallida)
-            }*/
+            }
 
         }
 
