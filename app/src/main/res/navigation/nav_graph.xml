@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.alvaromena.practica_final.OfertasFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_ofertas">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_datosProductoFragment"
+            app:destination="@id/datosProductoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.alvaromena.practica_final.TiendaFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_tieda">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_eliminarProductoFragment"
+            app:destination="@id/eliminarProductoFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_agregarProductoFragment"
+            app:destination="@id/agregarProductoFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_editarProductoFragment"
+            app:destination="@id/editarProductoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eliminarProductoFragment"
+        android:name="com.alvaromena.practica_final.EliminarProductoFragment"
+        android:label="fragment_eliminar_producto"
+        tools:layout="@layout/fragment_eliminar_producto" >
+        <action
+            android:id="@+id/action_eliminarProductoFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarProductoFragment"
+        android:name="com.alvaromena.practica_final.AgregarProductoFragment"
+        android:label="fragment_agregar_producto"
+        tools:layout="@layout/fragment_agregar_producto" >
+        <action
+            android:id="@+id/action_agregarProductoFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarProductoFragment"
+        android:name="com.alvaromena.practica_final.EditarProductoFragment"
+        android:label="fragment_editar_producto"
+        tools:layout="@layout/fragment_editar_producto" >
+        <action
+            android:id="@+id/action_editarProductoFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/datosProductoFragment"
+        android:name="com.alvaromena.practica_final.DatosProductoFragment"
+        android:label="fragment_datos_producto"
+        tools:layout="@layout/fragment_datos_producto" >
+        <action
+            android:id="@+id/action_datosProductoFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_datosProductoFragment_to_opinionesFragment"
+            app:destination="@id/opinionesFragment" />
+        <action
+            android:id="@+id/action_datosProductoFragment_to_contactarFragment"
+            app:destination="@id/contactarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/opinionesFragment"
+        android:name="com.alvaromena.practica_final.opinionesFragment"
+        android:label="fragment_opiniones"
+        tools:layout="@layout/fragment_opiniones" >
+        <action
+            android:id="@+id/action_opinionesFragment_to_datosProductoFragment"
+            app:destination="@id/datosProductoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactarFragment"
+        android:name="com.alvaromena.practica_final.ContactarFragment"
+        android:label="fragment_contactar"
+        tools:layout="@layout/fragment_contactar" >
+        <action
+            android:id="@+id/action_contactarFragment_to_datosProductoFragment"
+            app:destination="@id/datosProductoFragment" />
+    </fragment>
+</navigation>
